@@ -1,0 +1,451 @@
+{
+ "infraInfra": {
+  "attributes": {
+   "dn": "uni/infra"
+  },
+  "children": [
+   {
+    "infraNodeP": {
+     "attributes": {
+      "annotation": "",
+      "descr": "",
+      "name": "SWP-LEAF101-102",
+      "nameAlias": "",
+      "ownerKey": "",
+      "ownerTag": "",
+      "userdom": ":all:"
+     },
+     "children": [
+      {
+       "infraLeafS": {
+        "attributes": {
+         "annotation": "",
+         "descr": "",
+         "name": "LEAF101-102",
+         "nameAlias": "",
+         "ownerKey": "",
+         "ownerTag": "",
+         "type": "range",
+         "userdom": ":all:"
+        },
+        "children": [
+         {
+          "infraNodeBlk": {
+           "attributes": {
+            "annotation": "",
+            "descr": "",
+            "from_": "101",
+            "name": "2ad884b96315f9aa",
+            "nameAlias": "",
+            "to_": "102",
+            "userdom": ":all:"
+           }
+          }
+         }
+        ]
+       }
+      },
+      {
+       "infraRsAccPortP": {
+        "attributes": {
+         "annotation": "",
+         "tDn": "uni/infra/accportprof-IFP-LEAF101-102",
+         "userdom": ":all:"
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "mcpIfPol": {
+     "attributes": {
+      "adminSt": "enabled",
+      "annotation": "",
+      "descr": "",
+      "gracePeriod": "3",
+      "gracePeriodMsec": "0",
+      "maxPduPerVlanLimit": "256",
+      "mcpMode": "off",
+      "mcpPduPerVlan": "on",
+      "name": "MCP-ON",
+      "nameAlias": "",
+      "ownerKey": "",
+      "ownerTag": "",
+      "strictInitDelayTime": "0",
+      "strictTxFreq": "0",
+      "strictTxFreqMsec": "500",
+      "userdom": ":all:"
+     }
+    }
+   },
+   {
+    "lacpLagPol": {
+     "attributes": {
+      "annotation": "",
+      "ctrl": "fast-sel-hot-stdby,graceful-conv,susp-individual",
+      "descr": "",
+      "maxLinks": "16",
+      "minLinks": "1",
+      "mode": "active",
+      "name": "LACP-ACTIVE",
+      "nameAlias": "",
+      "ownerKey": "",
+      "ownerTag": "",
+      "pcLB": "static",
+      "userdom": ":all:"
+     }
+    }
+   },
+   {
+    "fvnsVlanInstP": {
+     "attributes": {
+      "allocMode": "static",
+      "annotation": "",
+      "descr": "",
+      "name": "VP-LEGACY-HANDOFF",
+      "nameAlias": "",
+      "ownerKey": "",
+      "ownerTag": "",
+      "userdom": ":all:"
+     },
+     "children": [
+      {
+       "fvnsEncapBlk": {
+        "attributes": {
+         "allocMode": "inherit",
+         "annotation": "",
+         "descr": "",
+         "from": "vlan-310",
+         "name": "",
+         "nameAlias": "",
+         "role": "external",
+         "to": "vlan-340",
+         "userdom": ":all:"
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "infraAttEntityP": {
+     "attributes": {
+      "annotation": "",
+      "descr": "",
+      "name": "AAEP-LEGACY",
+      "nameAlias": "",
+      "ownerKey": "",
+      "ownerTag": "",
+      "userdom": ":all:"
+     },
+     "children": [
+      {
+       "infraRsDomP": {
+        "attributes": {
+         "annotation": "",
+         "tDn": "uni/phys-PD-LEGACY",
+         "userdom": ":all:"
+        }
+       }
+      }
+     ]
+    }
+   },
+   {
+    "infraAccPortP": {
+     "attributes": {
+      "annotation": "",
+      "descr": "",
+      "name": "IFP-LEAF101-102",
+      "nameAlias": "",
+      "ownerKey": "",
+      "ownerTag": "",
+      "userdom": ":all:"
+     },
+     "children": [
+      {
+       "infraHPortS": {
+        "attributes": {
+         "annotation": "",
+         "descr": "",
+         "name": "LEGACY-HANDOFF",
+         "nameAlias": "",
+         "ownerKey": "",
+         "ownerTag": "",
+         "type": "range",
+         "userdom": ":all:"
+        },
+        "children": [
+         {
+          "infraPortBlk": {
+           "attributes": {
+            "annotation": "",
+            "descr": "",
+            "fromCard": "1",
+            "fromPort": "45",
+            "name": "block2",
+            "nameAlias": "",
+            "toCard": "1",
+            "toPort": "45",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsAccBaseGrp": {
+           "attributes": {
+            "annotation": "",
+            "fexId": "101",
+            "tDn": "uni/infra/funcprof/accbundle-IPG-VPC-LEGACY",
+            "userdom": ":all:"
+           }
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "infraFuncP": {
+     "attributes": {
+      "annotation": "",
+      "descr": "",
+      "name": "default",
+      "nameAlias": "",
+      "ownerKey": "",
+      "ownerTag": "",
+      "userdom": "all"
+     },
+     "children": [
+      {
+       "infraAccBndlGrp": {
+        "attributes": {
+         "annotation": "",
+         "descr": "",
+         "lagT": "node",
+         "name": "IPG-VPC-LEGACY",
+         "nameAlias": "",
+         "ownerKey": "",
+         "ownerTag": "",
+         "userdom": ":all:"
+        },
+        "children": [
+         {
+          "infraRsMcpIfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnMcpIfPolName": "MCP-ON",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsL2PortSecurityPol": {
+           "attributes": {
+            "annotation": "",
+            "tnL2PortSecurityPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsLldpIfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnLldpIfPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsFcIfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnFcIfPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsLinkFlapPol": {
+           "attributes": {
+            "annotation": "",
+            "tnFabricLinkFlapPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsLacpPol": {
+           "attributes": {
+            "annotation": "",
+            "tnLacpLagPolName": "LACP-ACTIVE",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsMacsecIfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnMacsecIfPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsL2PortAuthPol": {
+           "attributes": {
+            "annotation": "",
+            "tnL2PortAuthPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsL2IfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnL2IfPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsQosLlfcIfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnQosLlfcIfPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsSynceEthIfPolBndlGrp": {
+           "attributes": {
+            "annotation": "",
+            "tnSynceEthIfPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsStpIfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnStpIfPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsQosSdIfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnQosSdIfPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsMonIfInfraPol": {
+           "attributes": {
+            "annotation": "",
+            "tnMonInfraPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsQosPfcIfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnQosPfcIfPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsStormctrlIfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnStormctrlIfPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsHIfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnFabricHIfPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsQosNodropDscpMatchIfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnQosNodropDscpMatchIfPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsCdpIfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnCdpIfPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsQosIngressDppIfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnQosDppPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsQosEgressDppIfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnQosDppPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsAttEntP": {
+           "attributes": {
+            "annotation": "",
+            "tDn": "uni/infra/attentp-AAEP-LEGACY",
+            "userdom": ":all:"
+           }
+          }
+         },
+         {
+          "infraRsCoppIfPol": {
+           "attributes": {
+            "annotation": "",
+            "tnCoppIfPolName": "",
+            "userdom": ":all:"
+           }
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

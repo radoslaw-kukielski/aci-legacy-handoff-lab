@@ -1,0 +1,24 @@
+{
+ "physDomP": {
+  "attributes": {
+   "annotation": "",
+   "dn": "uni/phys-PD-LEGACY",
+   "name": "PD-LEGACY",
+   "nameAlias": "",
+   "ownerKey": "",
+   "ownerTag": "",
+   "userdom": ":all:"
+  },
+  "children": [
+   {
+    "infraRsVlanNs": {
+     "attributes": {
+      "annotation": "",
+      "tDn": "uni/infra/vlanns-[VP-LEGACY-HANDOFF]-static",
+      "userdom": ":all:"
+     }
+    }
+   }
+  ]
+ }
+}

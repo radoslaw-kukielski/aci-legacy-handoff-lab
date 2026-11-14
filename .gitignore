@@ -1,0 +1,4 @@
+# Uncropped originals: may show the Cisco logo, user names or tokens
+raw/
+*.png
+.DS_Store
